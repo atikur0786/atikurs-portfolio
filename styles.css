@@ -1,0 +1,81 @@
+body {
+  background-color: #01080e;
+  color: #607b96;
+  margin: 0;
+  padding: 30px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+}
+
+main {
+  background-color: #011627;
+  border-radius: 1rem;
+  border: 0.0625rem solid #1e2d3d;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-grow: 1;
+}
+
+header {
+  border-bottom: 0.0625rem solid #1e2d3d;
+  display: flex;
+  align-items: center;
+}
+
+header div {
+  padding: 6px 20px;
+  border-right: 0.0625rem solid #1e2d3d;
+}
+
+header div:first-child {
+  padding-right: 60px;
+}
+
+header div:last-child {
+  margin-left: auto;
+  border-right: none;
+  border-left: 0.0625rem solid #1e2d3d;
+}
+
+header div:hover:not(:first-child) {
+  background-color: #263b50;
+  cursor: pointer;
+}
+
+footer {
+  border-top: 0.0625rem solid #1e2d3d;
+  display: flex;
+  align-items: center;
+}
+
+footer div {
+  padding: 6px 20px;
+  border-right: 0.0625rem solid #1e2d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+footer div:hover:not(:first-child) {
+  background-color: #263b50;
+  cursor: pointer;
+}
+
+footer div:last-child {
+  margin-left: auto;
+  border-right: none;
+  border-left: 0.0625rem solid #1e2d3d;
+}
+
+footer div:last-child:hover {
+  background-color: #011627;
+  cursor: default;
+}
