@@ -21,6 +21,7 @@ main {
 section {
   display: flex;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 header {
@@ -47,6 +48,12 @@ header div:last-child {
 header div:hover:not(:first-child) {
   background-color: #263b50;
   cursor: pointer;
+}
+
+.active {
+  background-color: none;
+  color: #ffffff;
+  border-bottom: 3px solid #4d5bce;
 }
 
 footer {
@@ -78,4 +85,16 @@ footer div:last-child {
 footer div:last-child:hover {
   background-color: #011627;
   cursor: default;
+}
+
+footer div a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }

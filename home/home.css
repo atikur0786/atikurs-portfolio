@@ -1,0 +1,262 @@
+.hero {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(30, 50, 80, 0.8) 0%,
+    rgba(15, 25, 40, 1) 50%,
+    rgba(10, 15, 25, 1) 100%
+  );
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  color: #e5e9f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(77, 91, 206, 0.3);
+}
+
+.hero-content h2 {
+  color: #4d5bce;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.hero-content h6 {
+  color: #e99287;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.hero-content p {
+  margin-bottom: 0.5rem;
+  color: #607b96;
+  font-size: 1rem;
+  margin-top: 0rem;
+}
+
+.comment {
+  color: #607b96;
+  font-style: italic;
+}
+
+.github-variable {
+  margin-top: 1rem;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.keyword {
+  color: #4d5bce;
+}
+
+.variable {
+  color: #e99287;
+}
+
+.operator {
+  color: #ffffff;
+}
+
+.string {
+  color: #fba45f;
+}
+
+/* Terminal styling */
+.terminal {
+  background-color: #01121f;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border: 1px solid #1e2d3d;
+}
+
+.terminal-header {
+  background-color: #1e2d3d;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 6px;
+  margin-right: 12px;
+}
+
+.terminal-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close {
+  background-color: #ff5f56;
+}
+
+.minimize {
+  background-color: #ffbd2e;
+}
+
+.maximize {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  color: #e5e9f0;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.terminal-content {
+  padding: 12px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.prompt {
+  color: #4d5bce;
+  margin-right: 8px;
+}
+
+.command {
+  color: #e5e9f0;
+}
+
+.output {
+  color: #607b96;
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+
+/* Game container styling */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.game-console {
+  background-color: #011627;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border: 1px solid #1e2d3d;
+}
+
+.console-header {
+  background-color: #1e2d3d;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.console-title {
+  color: #e5e9f0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.console-controls button {
+  background-color: #4d5bce;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.console-controls button:hover {
+  background-color: #5a68d5;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  padding: 20px;
+  background-color: #011627;
+}
+
+.cell {
+  background-color: #1e2d3d;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.cell:hover {
+  background-color: #263b50;
+}
+
+.cell.x {
+  color: #e99287;
+}
+
+.cell.o {
+  color: #4d5bce;
+}
+
+.game-status {
+  padding: 12px;
+  text-align: center;
+  background-color: #1e2d3d;
+  color: #e5e9f0;
+  font-size: 1rem;
+  border-top: 1px solid #263b50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-content,
+  .game-container {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .terminal,
+  .game-console {
+    max-width: 100%;
+  }
+}

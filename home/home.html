@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link type="text/css" href="home.css">
-</head>
-
 <body>
     <section class="hero">
         <div class="hero-content">
-            <h6>Hi all, I'm</h6>
+            <h6>Hi all. I am</h6>
             <h1>Atikur Satter Mondal</h1>
             <h2>> Full-stack Developer</h2>
-            <p> // i build things for the web with a focus on user experience and clean code.</p>
-            <p> // you can also see it on my Github page</p>
-            <p>const githubProfile = "https://github.com/atikur0786"</p>
+            <p class="comment">// I build things for the web with a focus on user experience and clean code.</p>
+            <p class="comment">// You can also see it on my Github page.</p>
+            <p class="github-variable">
+                <span class="keyword">const</span>
+                <span class="variable">githubProfile</span>
+                <span class="operator">=</span>
+                <span class="string">"https://github.com/atikur0786"</span>
+            </p>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn close"></span>
+                        <span class="terminal-btn minimize"></span>
+                        <span class="terminal-btn maximize"></span>
+                    </div>
+                    <div class="terminal-title">atikur@portfolio: ~</div>
+                </div>
+                <div class="terminal-content">
+                    <p><span class="prompt">$</span> <span class="command">cd skills</span></p>
+                    <p><span class="prompt">$</span> <span class="command">ls</span></p>
+                    <p class="output">HTML CSS JavaScript Angular Typescript Bootstrap Material Node.js Express.js
+                        PostgreSQL</p>
+                    <p><span class="prompt">$</span> <span class="command">cat about.txt</span></p>
+                    <p class="output">Passionate developer with a focus on creating elegant solutions to complex
+                        problems.</p>
+                    <p><span class="prompt">$</span> <span class="command">_</span></p>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-            <!-- Your image or animated element -->
+        <div class="game-container">
+            <div class="game-console">
+                <div class="console-header">
+                    <div class="console-title">Tic-Tac-Toe</div>
+                    <div class="console-controls">
+                        <button id="reset-game">Reset Game</button>
+                    </div>
+                </div>
+                <div class="game-board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                <div class="game-status">Player X's turn</div>
+            </div>
         </div>
     </section>
+
+    <script src="./home.js"></script>
 </body>
 
 </html>
