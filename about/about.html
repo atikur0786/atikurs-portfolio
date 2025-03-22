@@ -1,15 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link type="text/css" href="about.css">
-</head>
-
 <body>
-    About Page
+    <section class="about-container">
+        <div class="about-sidebar">
+            <div class="folder-structure">
+                <div class="folder-header">
+                    <span class="folder-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 6C2 4.89543 2.89543 4 4 4H9L11 6H20C21.1046 6 22 6.89543 22 8V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6Z"
+                                fill="#4D5BCE" stroke="#4D5BCE" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="folder-title">personal-info</span>
+                </div>
+                <div class="folder-content">
+                    <div class="file active" data-tab="bio">
+                        <span class="file-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 2H14L18 6V20C18 21.1046 17.1046 22 16 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
+                                    fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M14 2V6H18" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="file-name">bio.txt</span>
+                    </div>
+                    <div class="file" data-tab="education">
+                        <span class="file-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 2H14L18 6V20C18 21.1046 17.1046 22 16 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
+                                    fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M14 2V6H18" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="file-name">education.txt</span>
+                    </div>
+                    <div class="file" data-tab="experience">
+                        <span class="file-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 2H14L18 6V20C18 21.1046 17.1046 22 16 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
+                                    fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M14 2V6H18" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="file-name">experience.txt</span>
+                    </div>
+                </div>
+
+                <div class="folder-header">
+                    <span class="folder-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 6C2 4.89543 2.89543 4 4 4H9L11 6H20C21.1046 6 22 6.89543 22 8V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6Z"
+                                fill="#4D5BCE" stroke="#4D5BCE" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="folder-title">professional-skills</span>
+                </div>
+                <div class="folder-content">
+                    <div class="file" data-tab="frontend">
+                        <span class="file-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 2H14L18 6V20C18 21.1046 17.1046 22 16 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
+                                    fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M14 2V6H18" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="file-name">frontend.js</span>
+                    </div>
+                    <div class="file" data-tab="backend">
+                        <span class="file-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 2H14L18 6V20C18 21.1046 17.1046 22 16 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
+                                    fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M14 2V6H18" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="file-name">backend.js</span>
+                    </div>
+                    <div class="file" data-tab="tools">
+                        <span class="file-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 2H14L18 6V20C18 21.1046 17.1046 22 16 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
+                                    fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M14 2V6H18" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="file-name">tools.config</span>
+                    </div>
+                </div>
+
+                <div class="folder-header">
+                    <span class="folder-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 6C2 4.89543 2.89543 4 4 4H9L11 6H20C21.1046 6 22 6.89543 22 8V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6Z"
+                                fill="#4D5BCE" stroke="#4D5BCE" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+
+                    </span>
+                    <span class="folder-title">hobbies</span>
+                </div>
+                <div class="folder-content">
+                    <div class="file" data-tab="interests">
+                        <span class="file-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 2H14L18 6V20C18 21.1046 17.1046 22 16 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
+                                    fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M14 2V6H18" fill="none" stroke="#FFFFFF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="file-name">interests.json</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <div class="code-editor">
+                <div class="editor-header">
+                    <!-- Tabs will be dynamically added/removed by JavaScript -->
+                </div>
+
+                <div class="editor-content">
+                    <!-- Bio Tab -->
+                    <div class="tab-content active" id="bio">
+                        <div class="profile-section">
+                            <div class="profile-image">
+                                <!-- Replace with your actual image path -->
+                                <img src="about/profile.jpg" alt="Atikur Satter Mondal">
+                            </div>
+                            <div class="profile-text">
+                                <h2>// About Me</h2>
+                                <p>Hello! I'm <span class="highlight">Atikur Satter Mondal</span>, a passionate
+                                    full-stack developer with a love for creating elegant solutions to complex problems.
+                                </p>
+                                <p>My journey in web development began with a curiosity about how websites work, which
+                                    quickly evolved into a passion for building them myself.</p>
+                                <p>I specialize in creating responsive, user-friendly applications with clean,
+                                    maintainable code. I'm constantly learning and exploring new technologies to stay at
+                                    the cutting edge of web development.</p>
+                                <p>When I'm not coding, you can find me [your hobbies/interests here].</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Tab -->
+                    <div class="tab-content" id="education">
+                        <h2>// Education</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2018 - 2022</div>
+                                <div class="timeline-content">
+                                    <h3>Bachelor of Science in Computer Science</h3>
+                                    <p class="institution">University Name</p>
+                                    <p>Graduated with honors, focusing on web technologies and software engineering
+                                        principles.</p>
+                                    <p>Key courses: Data Structures & Algorithms, Database Systems, Web Development,
+                                        Software Engineering</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2023</div>
+                                <div class="timeline-content">
+                                    <h3>Full-Stack Web Development Bootcamp</h3>
+                                    <p class="institution">Coding Academy</p>
+                                    <p>Intensive program covering modern web development technologies and best
+                                        practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Tab -->
+                    <div class="tab-content" id="experience">
+                        <h2>// Professional Experience</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022 - Present</div>
+                                <div class="timeline-content">
+                                    <h3>Full-Stack Developer</h3>
+                                    <p class="institution">Company Name</p>
+                                    <ul>
+                                        <li>Developed and maintained responsive web applications using React and Node.js
+                                        </li>
+                                        <li>Collaborated with design team to implement UI/UX improvements</li>
+                                        <li>Optimized database queries and API endpoints for improved performance</li>
+                                        <li>Implemented CI/CD pipelines for automated testing and deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2021 - 2022</div>
+                                <div class="timeline-content">
+                                    <h3>Web Development Intern</h3>
+                                    <p class="institution">Startup Name</p>
+                                    <ul>
+                                        <li>Assisted in developing front-end components using React</li>
+                                        <li>Created and maintained documentation for codebase</li>
+                                        <li>Participated in code reviews and team meetings</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Skills Tab -->
+                    <div class="tab-content" id="frontend">
+                        <h2>// Frontend Skills</h2>
+                        <pre><code>
+    /**
+     * @file: frontend.js
+     * @description: Frontend development skills
+     */
+    
+    const frontendSkills = {
+        languages: [
+            { name: "HTML5", proficiency: "Advanced" },
+            { name: "CSS3", proficiency: "Advanced" },
+            { name: "JavaScript (ES6+)", proficiency: "Advanced" }
+        ],
+        
+        frameworks: [
+            { name: "React", proficiency: "Advanced" },
+            { name: "Vue.js", proficiency: "Intermediate" },
+            { name: "Angular", proficiency: "Beginner" }
+        ],
+        
+        styling: [
+            { name: "SASS/SCSS", proficiency: "Advanced" },
+            { name: "Tailwind CSS", proficiency: "Advanced" },
+            { name: "Bootstrap", proficiency: "Advanced" },
+            { name: "Styled Components", proficiency: "Intermediate" }
+        ],
+        
+        stateManagement: [
+            { name: "Redux", proficiency: "Advanced" },
+            { name: "Context API", proficiency: "Advanced" }
+        ]
+    };
+    
+    // Always learning new technologies and improving existing skills
+                        </code></pre>
+                    </div>
+
+                    <!-- Backend Skills Tab -->
+                    <div class="tab-content" id="backend">
+                        <h2>// Backend Skills</h2>
+                        <pre><code>
+    /**
+     * @file: backend.js
+     * @description: Backend development skills
+     */
+    
+    const backendSkills = {
+        languages: [
+            { name: "Node.js", proficiency: "Advanced" },
+            { name: "Python", proficiency: "Intermediate" },
+            { name: "PHP", proficiency: "Beginner" }
+        ],
+        
+        frameworks: [
+            { name: "Express.js", proficiency: "Advanced" },
+            { name: "Django", proficiency: "Intermediate" },
+            { name: "Flask", proficiency: "Beginner" }
+        ],
+        
+        databases: [
+            { name: "MongoDB", proficiency: "Advanced" },
+            { name: "MySQL", proficiency: "Advanced" },
+            { name: "PostgreSQL", proficiency: "Intermediate" },
+            { name: "Firebase", proficiency: "Intermediate" }
+        ],
+        
+        apis: [
+            { name: "RESTful API Design", proficiency: "Advanced" },
+            { name: "GraphQL", proficiency: "Intermediate" },
+            { name: "WebSockets", proficiency: "Intermediate" }
+        ]
+    };
+    
+    // Constantly expanding my backend expertise
+                        </code></pre>
+                    </div>
+
+                    <!-- Tools Tab -->
+                    <div class="tab-content" id="tools">
+                        <h2>// Development Tools & Practices</h2>
+                        <pre><code>
+    # Development Environment and Tools Configuration
+    
+    [Version Control]
+    git = true
+    github = true
+    gitlab = intermediate
+    
+    [Package Managers]
+    npm = advanced
+    yarn = advanced
+    
+    [Build Tools]
+    webpack = advanced
+    babel = advanced
+    vite = intermediate
+    
+    [Testing]
+    jest = intermediate
+    cypress = intermediate
+    react-testing-library = intermediate
+    
+    [DevOps]
+    docker = intermediate
+    aws = beginner
+    netlify = advanced
+    vercel = advanced
+    
+    [Code Quality]
+    eslint = advanced
+    prettier = advanced
+    typescript = intermediate
+    
+    [Project Management]
+    jira = intermediate
+    trello = advanced
+    agile = true
+    scrum = true
+                        </code></pre>
+                    </div>
+
+                    <!-- Interests Tab -->
+                    <div class="tab-content" id="interests">
+                        <h2>// Personal Interests</h2>
+                        <pre><code>
+    {
+      "hobbies": [
+        {
+          "category": "Technology",
+          "activities": [
+            "Open source contribution",
+            "Learning new programming languages",
+            "Building side projects"
+          ]
+        },
+        {
+          "category": "Physical Activities",
+          "activities": [
+            "Hiking",
+            "Swimming",
+            "Cycling"
+          ]
+        },
+        {
+          "category": "Creative Pursuits",
+          "activities": [
+            "Photography",
+            "Digital art",
+            "UI/UX design"
+          ]
+        },
+        {
+          "category": "Entertainment",
+          "activities": [
+            "Science fiction books",
+            "Tech documentaries",
+            "Strategy games"
+          ]
+        }
+      ],
+      "languages": [
+        {
+          "name": "English",
+          "fluency": "Fluent"
+        },
+        {
+          "name": "Bengali",
+          "fluency": "Native"
+        }
+      ],
+      "travel": {
+        "visited": ["India", "Malaysia", "Singapore"],
+        "wishlist": ["Japan", "Canada", "Germany"]
+      }
+    }
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="about.js"></script>
+
 </body>
 
 </html>

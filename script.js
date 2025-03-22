@@ -39,6 +39,17 @@ function loadPage(page) {
           }
         };
         document.body.appendChild(script);
+      } else if (page === "about") {
+        // Load about.js for the about page
+        const script = document.createElement("script");
+        script.src = `${page}/${page}.js`;
+        script.onload = function () {
+          // Initialize the about page after script is loaded
+          if (typeof initAboutPage === "function") {
+            initAboutPage();
+          }
+        };
+        document.body.appendChild(script);
       }
 
       // Remove active class from all navigation items
