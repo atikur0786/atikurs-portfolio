@@ -1,9 +1,10 @@
 // Mapping page names to titles
 const pageTitles = {
-  home: "Home - My Portfolio",
-  about: "About Me - My Portfolio",
-  projects: "Projects - My Portfolio",
-  contact: "Contact - My Portfolio",
+  home: "Atikur's Digital Playground | Full-Stack Developer",
+  about: "The Mind Behind the Code | Atikur Satter Mondal",
+  projects: "Code Craftsmanship | Atikur's Web Creations",
+  contact: "Let's Connect | Reach Out to Atikur",
+  resume: "Skills & Experience | Atikur's Developer Journey",
 };
 
 function loadPage(page) {
