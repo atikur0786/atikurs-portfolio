@@ -1,0 +1,239 @@
+/* Resume Page Styling */
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #e5e9f0;
+  background-color: #011627;
+  overflow: hidden;
+}
+
+/* Header styling */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #011221;
+  border-bottom: 1px solid #1e2d3d;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+}
+
+.file-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.file-name {
+  font-family: "Fira Code", monospace;
+  color: #e5e9f0;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #1e2d3d;
+  border: none;
+  border-radius: 4px;
+  color: #e5e9f0;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.action-button:hover {
+  background-color: #263b50;
+  transform: translateY(-2px);
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+.action-icon {
+  margin-right: 8px;
+}
+
+/* Content styling */
+.resume-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #011627;
+  position: relative;
+}
+
+.pdf-container {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid #1e2d3d;
+  background-color: #011221;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdf-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 40px;
+  text-align: center;
+  color: #e5e9f0;
+}
+
+.fallback-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4d5bce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.fallback-button:hover {
+  background-color: #5a68d5;
+}
+
+/* Footer styling */
+.resume-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #011221;
+  border-top: 1px solid #1e2d3d;
+  font-size: 0.85rem;
+}
+
+.footer-note {
+  display: flex;
+  align-items: center;
+}
+
+.note-icon {
+  margin-right: 8px;
+}
+
+.highlight-date {
+  color: #e99287;
+  font-weight: 500;
+}
+
+.tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-label {
+  color: #607b96;
+}
+
+.tech-item {
+  padding: 3px 8px;
+  background-color: #1e2d3d;
+  border-radius: 3px;
+  color: #43d9ad;
+  font-family: "Fira Code", monospace;
+  font-size: 0.8rem;
+}
+
+/* Loading animation for PDF */
+.pdf-container::before {
+  content: "Loading resume...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #607b96;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resume-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .resume-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+  }
+}
+
+/* Custom scrollbar */
+.resume-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.resume-container::-webkit-scrollbar-track {
+  background: #011627;
+}
+
+.resume-container::-webkit-scrollbar-thumb {
+  background-color: #1e2d3d;
+  border-radius: 4px;
+}
+
+.resume-container::-webkit-scrollbar-thumb:hover {
+  background-color: #263b50;
+}
+
+/* Focus styles for accessibility */
+.action-button:focus,
+.fallback-button:focus {
+  outline: 2px solid #4d5bce;
+  outline-offset: 2px;
+}

@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link type="text/css" href="style.css">
-</head>
-
 <body>
-    Resume Page
+    <section class="resume-container">
+        <div class="resume-header">
+            <div class="file-info">
+                <span class="file-icon">📄</span>
+                <span class="file-name">Atikur_Satter_Mondal_Resume.pdf</span>
+            </div>
+            <div class="actions">
+                <a href="resume/Atikur_Satter_Mondal_Resume.pdf" download class="action-button">
+                    <span class="action-icon">⬇️</span>
+                    <span class="action-text">Download</span>
+                </a>
+                <a href="resume/Atikur_Satter_Mondal_Resume.pdf" target="_blank" class="action-button">
+                    <span class="action-icon">🔍</span>
+                    <span class="action-text">Open in New Tab</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="resume-content">
+            <div class="pdf-container">
+                <!-- PDF Embed with fallback -->
+                <object data="resume/Atikur_Satter_Mondal_Resume.pdf" type="application/pdf" class="pdf-viewer">
+                    <div class="pdf-fallback">
+                        <p>It seems your browser doesn't support embedded PDFs.</p>
+                        <p>No worries! You can:</p>
+                        <a href="resume/Atikur_Satter_Mondal_Resume.pdf" download class="fallback-button">Download the
+                            PDF</a>
+                        <a href="resume/Atikur_Satter_Mondal_Resume.pdf" target="_blank" class="fallback-button">Open in
+                            New Tab</a>
+                    </div>
+                </object>
+            </div>
+        </div>
+
+        <div class="resume-footer">
+            <div class="footer-note">
+                <span class="note-icon">💡</span>
+                <span class="note-text">This resume was last updated on <span class="highlight-date">February
+                        2025</span></span>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-label">Built with:</span>
+                <span class="tech-item">CANVA</span>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
