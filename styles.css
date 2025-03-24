@@ -99,3 +99,10 @@ a:active {
   justify-content: center;
   gap: 5px;
 }
+
+.indian-flag {
+  background-color: #4d5bce;
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-right: 16px;
+}
