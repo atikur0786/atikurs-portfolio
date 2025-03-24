@@ -63,12 +63,13 @@ footer {
 }
 
 footer div {
-  padding: 6px 20px;
+  padding: 1px 20px;
   border-right: 0.0625rem solid #1e2d3d;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  height: 100%;
 }
 
 footer div:hover:not(:first-child) {
