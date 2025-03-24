@@ -238,6 +238,39 @@
   border-top: 1px solid #263b50;
 }
 
+/* Copy button styling */
+.copy-btn {
+  background: none;
+  border: none;
+  color: #607b96;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-btn:hover {
+  color: #e5e9f0;
+  background-color: rgba(77, 91, 206, 0.2);
+}
+
+.copy-btn.success {
+  color: #43d9ad;
+}
+
+.copy-btn.success svg {
+  display: none;
+}
+
+.copy-btn.success::after {
+  content: "✓";
+  font-size: 16px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .hero {

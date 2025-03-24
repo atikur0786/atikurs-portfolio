@@ -12,6 +12,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
+ * Copy GitHub URL to clipboard
+ */
+function copyGitHubUrl() {
+  // Get the GitHub URL
+  let githubUrl;
+  const stringElement = document.querySelector(".github-variable .string");
+
+  if (stringElement) {
+    githubUrl = stringElement.textContent.replace(/"/g, "");
+  } else {
+    // Fallback
+    githubUrl = "https://github.com/atikur0786";
+  }
+
+  // Copy to clipboard
+  navigator.clipboard
+    .writeText(githubUrl)
+    .then(() => {
+      // Show success state
+      const copyBtn = document.getElementById("copy-github");
+      if (copyBtn) {
+        copyBtn.classList.add("success");
+
+        // Reset after 2 seconds
+        setTimeout(() => {
+          copyBtn.classList.remove("success");
+        }, 2000);
+      }
+    })
+    .catch((err) => {
+      console.error("Failed to copy:", err);
+      alert("Failed to copy to clipboard. Please copy manually.");
+    });
+}
+
+/**
  * Terminal functionality - makes cursor blink in terminal
  */
 function initTerminal() {
@@ -36,6 +72,11 @@ function initTicTacToe() {
   const cells = document.querySelectorAll(".cell");
   const status = document.querySelector(".game-status");
   const resetButton = document.getElementById("reset-game");
+
+  if (!cells.length || !status || !resetButton) {
+    console.log("Tic-tac-toe elements not found, skipping initialization");
+    return;
+  }
 
   // Game state variables
   let currentPlayer = "X";
