@@ -50,6 +50,17 @@ function loadPage(page) {
           }
         };
         document.body.appendChild(script);
+      } else if (page === "contact") {
+        // Load contact.js and ensure proper initialization
+        const script = document.createElement("script");
+        script.src = `${page}/${page}.js`;
+        script.onload = function () {
+          // Explicitly call initialization
+          if (typeof initContactPage === "function") {
+            initContactPage();
+          }
+        };
+        document.body.appendChild(script);
       }
 
       // Remove active class from all navigation items
