@@ -1,0 +1,173 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #011221;
+  border: 1px solid #1e2d3d;
+  border-radius: 4px;
+  color: #e5e9f0;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+#sort-select {
+  padding: 10px 15px;
+  background-color: #011221;
+  border: 1px solid #1e2d3d;
+  border-radius: 4px;
+  color: #e5e9f0;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.repo-card {
+  background-color: #01121f;
+  border: 1px solid #1e2d3d;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.repo-header {
+  padding: 1.5rem;
+}
+
+.repo-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.repo-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  min-height: 3rem;
+}
+
+.repo-meta {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e2d3d;
+  font-size: 0.9rem;
+  border-top: 1px solid #4d5bce;
+  border-bottom: 1px solid #4d5bce;
+}
+
+.repo-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.repo-language {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.language-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.repo-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.repo-link {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.github-link {
+  background-color: #4d5bce;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #3146e8;
+  color: #ffffff;
+}
+
+.demo-link {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.demo-link:hover {
+  background-color: #3a5ce5;
+}
+
+.loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.loading i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4a6cf7;
+}
+
+.no-repos {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+  }
+
+  .repos-grid {
+    grid-template-columns: 1fr;
+  }
+}

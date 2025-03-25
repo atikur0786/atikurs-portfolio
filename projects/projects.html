@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link type="text/css" href="projects.css">
-</head>
-
 <body>
-    Projects Page
+    <section id="projects">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search repositories...">
+                <select id="sort-select">
+                    <option value="updated">Recently Updated</option>
+                    <option value="created">Recently Created</option>
+                    <option value="name">Name</option>
+                    <option value="stars">Stars</option>
+                </select>
+            </div>
+
+            <div id="repos-container" class="repos-grid">
+                <!-- Repositories will be loaded here -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading repositories...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="projects.js"></script>
 </body>
 
 </html>

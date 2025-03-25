@@ -61,6 +61,16 @@ function loadPage(page) {
           }
         };
         document.body.appendChild(script);
+      } else if (page === "projects") {
+        const script = document.createElement("script");
+        script.src = `${page}/${page}.js`;
+        script.onload = function () {
+          // Call the initialization function for projects page
+          if (typeof initProjectsPage === "function") {
+            initProjectsPage();
+          }
+        };
+        document.body.appendChild(script);
       }
 
       // Remove active class from all navigation items
