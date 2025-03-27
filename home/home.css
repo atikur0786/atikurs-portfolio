@@ -276,11 +276,12 @@
   .hero {
     flex-direction: column;
     height: auto;
+    overflow-y: auto;
   }
 
   .hero-content,
   .game-container {
-    width: 100%;
+    width: auto;
     padding: 2rem;
   }
 

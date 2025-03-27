@@ -114,3 +114,27 @@ window.addEventListener("popstate", () => {
   const page = location.hash.replace("#", "") || "home";
   loadPage(page);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  hamburgerMenu.addEventListener("click", function () {
+    hamburgerMenu.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = mobileMenu.classList.contains("active")
+      ? "hidden"
+      : "";
+  });
+
+  // Close menu when clicking on a menu item
+  const mobileMenuItems = document.querySelectorAll(".mobile-menu-items div");
+  mobileMenuItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      hamburgerMenu.classList.remove("active");
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  });
+});
