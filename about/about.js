@@ -9,7 +9,7 @@ function initAboutPage() {
   const placeholder = document.createElement("div");
   placeholder.className = "editor-placeholder";
   placeholder.innerHTML =
-    "<p>Select a file from the sidebar to view content</p>";
+    "<p>Select a file from the sidebar/topbar to view content</p>";
   editorContent.appendChild(placeholder);
 
   function switchTab(tabId) {

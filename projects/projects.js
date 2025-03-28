@@ -19,7 +19,7 @@ function initProjectsPage() {
 
       const repos = await response.json();
       allRepos = repos;
-      displayRepositories(repos);
+      sortRepositories(repos);
     } catch (error) {
       console.error("Error fetching repositories:", error);
       reposContainer.innerHTML = `
