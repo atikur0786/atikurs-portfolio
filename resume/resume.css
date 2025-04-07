@@ -166,6 +166,15 @@
   font-size: 0.8rem;
 }
 
+.tech-item a {
+  color: #43d9ad;
+  text-decoration: none;
+}
+
+.tech-item a:hover {
+  text-decoration: underline;
+}
+
 /* Loading animation for PDF */
 .pdf-container::before {
   content: "Loading resume...";
