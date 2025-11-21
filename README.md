@@ -1,43 +1,20 @@
-# Atikur's Portfolio
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-![Portfolio Preview](./image-preview.jpg)
+# Run and deploy your AI Studio app
 
-## Overview
+This contains everything you need to run your app locally.
 
-A personal portfolio website showcasing my skills, projects, and professional background with a clean, code editor-inspired interface.
+View your app in AI Studio: https://ai.studio/apps/drive/1yrTFsMQyvVNKZj97mBZBTcgZpvGk10B5
 
-## Features
+## Run Locally
 
-- **Interactive Navigation**: Easy-to-use menu system
-- **Responsive Design**: Optimized for both desktop and mobile devices
-- **Code Editor Aesthetic**: Modern developer-friendly UI
-- **Project Showcase**: Detailed display of my work
-- **Resume Section**: Professional background and skills
-- **Contact Form**: Direct way to get in touch
+**Prerequisites:**  Node.js
 
-## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- Responsive Design Principles
-
-## Project Structure
-
-```
-├── index.html          # Main HTML file
-├── styles.css          # Main stylesheet
-├── script.js           # JavaScript functionality
-└── assets/             # Images and other assets
-```
-
-## Contact
-
-Atikur Satter Mondal
-
-- Email: atikursattermondal@gmail.com
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/atikur-satter-mondal-a302ba1a5)
-- GitHub: [GitHub Profile](https://github.com/atikur0786)
-- X (Twitter): [X Profile](https://twitter.com/atikursatter)
-
-Feel free to reach out for any inquiries or collaboration opportunities.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
