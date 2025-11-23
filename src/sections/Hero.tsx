@@ -7,7 +7,7 @@ import Button from "../components/ui/Button";
 const Hero: React.FC = () => {
   return (
     <section
-      id="about"
+      id="home"
       className="min-h-screen flex flex-col justify-center relative pt-20"
     >
       <div className="container mx-auto px-6 md:px-12 max-w-6xl">
@@ -65,7 +65,9 @@ const Hero: React.FC = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <Button href="#projects">View Work</Button>
+            <Button variant="primary" href="#projects">
+              View Work
+            </Button>
             <Button variant="outline" href="#contact">
               Contact Me
             </Button>

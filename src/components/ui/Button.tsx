@@ -37,12 +37,12 @@ type Props = AnchorProps | MotionButtonProps;
 
 const variantStyles: Record<ButtonVariants, string> = {
   primary:
-    "bg-primary text-white hover:bg-neutral-800 hover:scale-105 hover:shadow-lg",
+    "bg-primary text-white dark:text-black hover:bg-neutral-800 hover:scale-105 hover:shadow-lg",
   outline:
     "border border-neutral-300 text-primary hover:border-primary hover:bg-neutral-50",
   ghost: "text-secondary hover:text-primary hover:bg-neutral-100/50",
   white:
-    "bg-white text-primary hover:bg-neutral-100 hover:scale-105 hover:shadow-lg",
+    "bg-white text-neutral-900 hover:bg-neutral-100 hover:scale-105 hover:shadow-lg",
   "outline-white":
     "border border-white/20 text-white hover:bg-white/10 hover:border-white",
 };

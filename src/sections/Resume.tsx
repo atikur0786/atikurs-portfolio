@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FileText, Download, Eye, X } from "lucide-react";
 import Section from "../components/ui/Section";
@@ -10,7 +11,7 @@ const Resume: React.FC = () => {
 
   return (
     <Section id="resume">
-      <div className="bg-primary rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
+      <div className="bg-primary dark:bg-neutral-800 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
           <div className="absolute -top-24 -left-24 w-64 h-64 bg-accent blur-3xl rounded-full" />
@@ -55,73 +56,79 @@ const Resume: React.FC = () => {
       </div>
 
       {/* Resume Modal */}
-      <AnimatePresence>
-        {isModalOpen && (
-          <div className="fixed inset-0 z-50 bg-white flex items-center justify-center p-4 sm:p-8">
-            <motion.div
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsModalOpen(false)}
-            />
-            <motion.div
-              className="bg-white w-full max-w-5xl h-[85vh] rounded-2xl shadow-2xl relative flex flex-col overflow-hidden"
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            >
-              <div className="flex justify-between items-center p-4 border-b border-neutral-100 bg-neutral-50">
-                <h3 className="font-semibold text-primary">Resume Preview</h3>
-                <div className="flex items-center gap-2">
-                  <a
-                    href={PERSONAL_INFO.resumeUrl}
-                    download="Resume"
-                    className="p-2 hover:bg-neutral-200 rounded-full transition-colors text-secondary hover:text-primary"
-                    title="Download PDF"
-                  >
-                    <Download className="w-5 h-5" />
-                  </a>
-                  <button
-                    onClick={() => setIsModalOpen(false)}
-                    className="p-2 hover:bg-neutral-200 rounded-full transition-colors text-secondary hover:text-primary"
-                    title="Close"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="flex-1 bg-neutral-100 relative">
-                <object
-                  data={PERSONAL_INFO.resumeUrl}
-                  type="application/pdf"
-                  className="w-full h-full border-none"
+      {/* Resume Modal */}
+      {typeof document !== 'undefined' &&
+        ReactDOM.createPortal(
+          <AnimatePresence>
+            {isModalOpen && (
+              <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-8">
+                <motion.div
+                  className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  onClick={() => setIsModalOpen(false)}
+                />
+                <motion.div
+                  className="bg-white dark:bg-neutral-900 w-full max-w-5xl h-[85vh] rounded-2xl shadow-2xl relative flex flex-col overflow-hidden z-10"
+                  initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 >
-                  <div className="pdf-fallback">
-                    <p>It seems your browser doesn't support embedded PDFs.</p>
-                    <p>No worries! You can:</p>
-                    <a
-                      href={PERSONAL_INFO.resumeUrl}
-                      download
-                      className="fallback-button"
-                    >
-                      Download the PDF
-                    </a>
-                    <a
-                      href={PERSONAL_INFO.resumeUrl}
-                      target="_blank"
-                      className="fallback-button"
-                    >
-                      Open in New Tab
-                    </a>
+                  <div className="flex justify-between items-center p-4 border-b border-neutral-100 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800">
+                    <h3 className="font-semibold text-primary">Resume Preview</h3>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={PERSONAL_INFO.resumeUrl}
+                        download="Resume"
+                        className="p-2 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-full transition-colors text-secondary hover:text-primary"
+                        title="Download PDF"
+                      >
+                        <Download className="w-5 h-5" />
+                      </a>
+                      <button
+                        onClick={() => setIsModalOpen(false)}
+                        className="p-2 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-full transition-colors text-secondary hover:text-primary"
+                        title="Close"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
                   </div>
-                </object>
+
+                  <div className="flex-1 bg-neutral-100 dark:bg-neutral-900/50 relative">
+                    <object
+                      data={PERSONAL_INFO.resumeUrl}
+                      type="application/pdf"
+                      className="w-full h-full border-none"
+                    >
+                      <div className="pdf-fallback">
+                        <p>It seems your browser doesn't support embedded PDFs.</p>
+                        <p>No worries! You can:</p>
+                        <a
+                          href={PERSONAL_INFO.resumeUrl}
+                          download
+                          className="fallback-button"
+                        >
+                          Download the PDF
+                        </a>
+                        <a
+                          href={PERSONAL_INFO.resumeUrl}
+                          target="_blank"
+                          className="fallback-button"
+                        >
+                          Open in New Tab
+                        </a>
+                      </div>
+                    </object>
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+            )}
+          </AnimatePresence>,
+          document.body
+        )
+      }
     </Section>
   );
 };
