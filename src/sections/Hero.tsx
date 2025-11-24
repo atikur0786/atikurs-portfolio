@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { PERSONAL_INFO } from "../constants";
 import Button from "../components/ui/Button";
+import { SOCIALS } from "@/constants";
+import { Mail, Github, Linkedin, Twitter, BookOpen } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
@@ -73,6 +75,43 @@ const Hero: React.FC = () => {
             </Button>
           </motion.div>
         </motion.div>
+
+        <div className="flex flex-wrap gap-4 mt-4">
+          {SOCIALS.map((social) => {
+            let Icon = Github;
+            switch (social.icon) {
+              case "github":
+                Icon = Github;
+                break;
+              case "linkedin":
+                Icon = Linkedin;
+                break;
+              case "twitter":
+                Icon = Twitter;
+                break;
+              case "substack":
+                Icon = BookOpen;
+                break;
+              case "email":
+                Icon = Mail;
+                break;
+            }
+
+            return (
+              <a
+                key={social.platform}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-secondary hover:bg-primary hover:text-surface hover:border-primary transition-all duration-300"
+                aria-label={social.platform}
+                title={social.platform}
+              >
+                <Icon className="w-5 h-5" />
+              </a>
+            );
+          })}
+        </div>
       </div>
 
       <motion.div
