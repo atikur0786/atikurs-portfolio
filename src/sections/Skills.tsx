@@ -54,7 +54,7 @@ const Skills: React.FC = () => {
               <motion.div
                 key={skillGroup.category}
                 variants={itemVariants}
-                className="group p-8 rounded-2xl bg-white dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 shadow-sm hover:shadow-lg hover:border-neutral-200 dark:hover:border-neutral-600 transition-all duration-300"
+                className="group p-4 rounded-2xl bg-white dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 shadow-sm hover:shadow-lg hover:border-neutral-200 dark:hover:border-neutral-600 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-neutral-50 dark:bg-neutral-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
