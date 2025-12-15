@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   phone: "+91 9382820248",
   location: "Hyderabad, India",
   bio: "I’m Atikur Satter Mondal, a full-stack developer with 3+ years of experience architecting secure, scalable, and performance-driven applications. At Jukshio Technology Innovation, I’ve led major initiatives including a real-time Video KYC platform, AI/ML data curation dashboards, and enterprise onboarding systems used by hundreds of daily users. \n My expertise spans Angular, React, Node.js, Express, Golang, PostgreSQL, and cloud infrastructure (GCP/Azure). I specialize in building systems that handle real-time communication, data encryption (AES-256-GCM), and large-scale data workflows. I care deeply about clean code, thoughtful UI/UX, and solving meaningful engineering problems.",
-  resumeUrl: "/Atikur Satter Mondal.pdf",
+  resumeUrl: "Atikur Satter Mondal.pdf",
 };
 
 export const GITHUB_USERNAME = "atikur0786";
