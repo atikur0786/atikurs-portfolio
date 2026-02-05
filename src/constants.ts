@@ -22,7 +22,7 @@ export const PROJECTS = [
       "My personal portfolio website built with React, Tailwind CSS, and Framer Motion.",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     githubUrl: "https://github.com/atikur0786/portfolio",
-    liveUrl: "https://atikur.dev",
+    liveUrl: "https://atikur0786.github.io/atikurs-portfolio",
     imageUrl: "https://opengraph.githubassets.com/1/atikur0786/portfolio",
   },
 ];
